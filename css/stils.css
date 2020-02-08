@@ -7,8 +7,9 @@
     font: 35px Montserrat, sans-serif;
     font-weight: bold;
   }
-  p {font-size: 16px;}
+  p {font-size: 16px; overflow: auto;}
   .margin {margin-bottom: 45px;}
+  .margin_columns {margin-bottom: 25px; font: 30px Montserrat, sans-serif;}
   .bg-1 { 
     background-color: #1abc9c; /* Green */
     color: #ffffff;
@@ -27,7 +28,7 @@
   }
   .container-fluid {
     padding-top: 70px;
-    padding-bottom: 70px;
+    padding-bottom: 50px;
   }
   .navbar {
     padding-top: 15px;
