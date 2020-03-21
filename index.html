@@ -26,9 +26,10 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">&lt;DIV&gt;</a></li>
-        <li><a href="#">&lt;SPAN&gt;</a></li>
-        <li><a href="#">&lt;CODE&gt;</a></li>
+        <li><a href="#div">&lt;DIV&gt;</a></li>
+        <li><a href="#span">&lt;SPAN&gt;</a></li>
+        <li><a href="#code">&lt;CODE&gt;</a></li>
+        <li><a href="#extra">EXTRA</a></li>
         <li><a href="#" class="btn btn-default btn-lg">
         <span class="glyphicon glyphicon-search"></span> Search
         </a></li>
@@ -38,7 +39,7 @@
 </nav>
 
 <!-- First Container -->
-<div class="container-fluid bg-1 text-center">
+<div class="container-fluid bg-1 text-center" id="div">
     <h3 class="margin">&lt;div&gt;</h3>
   <p>The &lt;div&gt; tag defines a division or a section in an HTML document. </p>
   <p>The &lt;div&gt; element is often used as a container for other HTML elements to style them with CSS or to perform certain tasks with JavaScript.</p>
@@ -48,7 +49,7 @@
 </div>
 
 <!-- Second Container -->
-<div class="container-fluid bg-2 text-center">
+<div class="container-fluid bg-2 text-center" id="span">
   <h3 class="margin">&lt;span&gt;</h3>
   <p>The &lt;span&gt; tag is used to group inline-elements in a document.</p>
   <p>The &lt;span&gt; tag provides no visual change by itself, however, it is a simple way to hook specific properties to just a part of text or document.</p>
@@ -56,7 +57,7 @@
 </div>
 
 <!-- Third Container (Grid) -->
-<div class="container-fluid bg-3 text-center">    
+<div class="container-fluid bg-3 text-center" id="code">    
   <h3 class="margin">&lt;code&gt; and similar</h3><br>
   <div class="row">
     <div class="col-sm-4">
@@ -79,10 +80,45 @@
   </div>
 </div>
 
+<div class="container-fluid bg-4 text-center" id="extra">    
+  <h3 class="margin">Some useful little code snippets</h3><br>
+  <div class="row">
+    <div class="col-sm-4">
+      <h3 class="margin_columns">animations</h3>
+      <button type="button" class="btn" id="myBtn" onclick="myFunction()">Activate animation</button>
+      <p>In the picture below you can see the css code used to code the animation class</p>
+      <img src="images/slide.png" class="img-responsive" id="myImg" style="display:inline; width: 100%;" alt="Picture">
+      <p></p>
+    </div>
+    <div class="col-sm-4">
+      <h3 class="margin_columns">hover responses</h3>
+      <img src="images/hover.png" class="img-responsive img-circle hov" style="display:inline; width: 100%;" alt="Picture">
+      <p>Point your cursor to this image to see how it responds.</p>
+      <p>To achieve this add the code shown to your css stylesheet and use the class .hov when describing the image</p>
+    </div>
+    <div class="col-sm-4">
+      <h3 class="margin_columns">smooth scrolling</h3>
+      <img src="images/scroll.png" class="img-responsive " style="display:inline; width: 100%;" alt="Picture">
+      <p>This little piece of code will activate the smooth scrolling on your whole page.</p>
+      <p>It needs to be inserted in your css stylesheet (preferably the first lines as it impacts the whole html document).</p>
+      <p>You can test what it does by clicking on items in this pages navbar(notice how it scrolls instead of teleporting).</p>
+    </div>
+  </div>
+</div>
+
 <!-- Footer -->
 <footer class="container-fluid bg-4 text-center">
   <p> © copyright <a href="https://www.instagram.com/mikelis_p/">miķelis putnieks</a>.</p> 
 </footer>
+
+<script>
+    function myFunction() {
+      let elm = document.getElementById("myImg");
+      let newone = elm.cloneNode(true);
+      elm.parentNode.replaceChild(newone, elm);
+      document.getElementById("myImg").classList.add("slide");
+    }
+</script>
 
 </body>
 </html>

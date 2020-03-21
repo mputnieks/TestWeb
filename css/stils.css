@@ -1,4 +1,10 @@
-  body {
+    
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    body {
     font: 20px Montserrat, sans-serif;
     line-height: 1.8;
     color: #f5f6f7;
@@ -42,3 +48,55 @@
   .navbar-nav  li a:hover {
     color: #1abc9c !important;
   }
+  
+  .hov:hover {
+      opacity: 50%;
+      cursor: pointer;
+  }
+  
+  
+  
+  #myBtn {
+      background-color: brown;
+      padding: 10px;
+      margin-bottom: 20px;
+  }
+  
+  #myBtn:hover {
+      color: deepskyblue;
+      background-color: crimson;
+  }
+  
+  button:focus { outline:0 !important; color:white !important;}
+  
+  .slide {
+    overflow: hidden;
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 2.5s;
+    -webkit-animation-duration: 2.5s;
+    animation-iteration-count: 2;
+    animation-direction: alternate-reverse;
+    visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateX(-100%);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translate(0%);
+    }
+  }
+  
